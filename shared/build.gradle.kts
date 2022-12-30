@@ -11,7 +11,7 @@ kotlin {
     iosX64()
     iosArm64()
     iosSimulatorArm64()
-
+    
     cocoapods {
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
@@ -80,5 +80,12 @@ android {
     defaultConfig {
         minSdk = 24
         targetSdk = 33
+    }
+}
+
+sqldelight {
+    database("TranslateDatabase") {
+        packageName = "ru.kheynov.kmm_translator.database"
+        sourceFolders = listOf("sqldelight")
     }
 }
